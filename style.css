@@ -29,7 +29,7 @@ body {
 
 header {
   display: flex;
-  background-color: #e1e0c9;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 200px;
   height: 60px;
   align-items: center;
@@ -38,7 +38,7 @@ header {
   padding-left: 40px;
   padding-right: 20px;
   justify-content: space-between;
-  border: 3px solid #444444;
+  /*border: 3px solid #444444;*/
 }
 
 nav ul {
@@ -47,6 +47,7 @@ nav ul {
 
 li {
   display: inline-block;
+  color: white;
   border: 1px solid #e1e0c9;
   border-radius: 200px;
   padding: 7px;
@@ -61,12 +62,12 @@ li:hover {
 }
 
 a:link {
-  color: goldenrod;
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -83,8 +84,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  background-color: white;
-  border: 4px solid #444444;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 120px 120px 0 0;
+  /*border: 4px solid #444444;*/
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 100px;
@@ -92,11 +95,13 @@ main {
 }
 
 .bigTitle {
+  text-align: center;
   font-size: 100px;
   font-family: Noto Sans, sans-serif;
 }
 
 .paragraph {
+  text-align: center;
   font-size: 25px;
   font-family: Noto Sans, sans-serif;
   margin-bottom: 170px;
@@ -116,8 +121,7 @@ main {
 }
 
 footer {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 60px 0 60px 0;
   background-color: #444444;
   width: 100%;
 }
@@ -126,4 +130,86 @@ footer {
   font-family: Noto Sans, sans-serif;
   color: #c1b9bf;
   font-size: 15px;
+}
+
+.card {
+  display: flex;
+  width: 60vh;
+  height: 25vh;
+  background-color: lightblue;
+  border-radius: 50px;
+  margin: 2vh;
+  transition: 300ms;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  display: flex;
+  font-family: Noto Sans, sans-serif;
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
+  /*background-color: black;*/
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 300ms;
+  background: rgba(0, 0, 0, 0.23);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+}
+
+.card:hover .overlay{
+  opacity: 1;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socials div {
+  font-family: Noto Sans, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.socials div a{
+  transition: 500ms;
+}
+
+.socials div:hover a{
+  color: goldenrod;
+}
+
+#webtime {
+  background-image: url("img/webtime.png");
+}
+
+#snake {
+  background-image: url("img/snake.png");
+}
+
+.overlay a {
+  transition: 500ms;
+}
+
+.overlay a:hover{
+  color: goldenrod;
 }
