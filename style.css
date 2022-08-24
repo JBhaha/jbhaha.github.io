@@ -167,7 +167,7 @@ footer {
   background-color: black;
 }
 
-.card:hover .overlay{
+.card:hover .overlay {
   opacity: 1;
 }
 
@@ -190,26 +190,34 @@ footer {
   text-align: center;
 }
 
-.socials div a{
+.socials div a {
   transition: 500ms;
 }
 
-.socials div:hover a{
+.socials div:hover a {
   color: goldenrod;
 }
 
 #webtime {
-  background-image: url("img/webtime.png");
+  background-image: url('img/webtime.png');
 }
 
 #snake {
-  background-image: url("img/snake.png");
+  background-image: url('img/snake.png');
+}
+
+#ultimate_drills {
+  background-image: url('img/drill_plugin.png');
+}
+
+#textadv {
+  background-image: url('img/textadv.png');
 }
 
 .overlay a {
   transition: 500ms;
 }
 
-.overlay a:hover{
+.overlay a:hover {
   color: goldenrod;
 }
