@@ -1,0 +1,106 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #9d4ba1 0%, #dd875a 100%);
+  background-size: 200% 200%;
+  animation: moveGradient 20s infinite ease;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes moveGradient {
+  0%   { background-position: 100% 0%; }
+  25%  { background-position: 25% 25%; }
+  50%  { background-position: 0% 100%; }
+  75%  { background-position: 25% 25%; }
+  100% { background-position: 100% 0%; }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.logo {
+  width: min(320px, 70vw);
+  height: auto;
+  display: block;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.icons a {
+  color: white;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  text-decoration: none;
+  transition: transform 200ms, opacity 200ms;
+  opacity: 0.9;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socials div {
+  font-family: Noto Sans, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.socials div a {
+  transition: 500ms;
+}
+
+.socials div:hover a {
+  color: goldenrod;
+}
+
+#webtime {
+  background-image: url('img/webtime.png');
+}
+
+#snake {
+  background-image: url('img/snake.png');
+}
+
+#ultimate_drills {
+  background-image: url('img/drill_plugin.png');
+}
+
+#textadv {
+  background-image: url('img/textadv.png');
+}
+
+.overlay a {
+  transition: 500ms;
+}
+
+.overlay a:hover {
+  color: goldenrod;
+}
